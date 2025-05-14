@@ -1,2 +1,0 @@
-[console_scripts]
-doc2pptx = doc2pptx.cli:app
