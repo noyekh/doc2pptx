@@ -1,210 +1,135 @@
 # doc2pptx
 
-**doc2pptx** est un outil Python permettant de générer et d'éditer des présentations PowerPoint (.pptx) à partir de contenu structuré en JSON ou Markdown.
+**doc2pptx** est un outil Python qui génère et édite des présentations PowerPoint (.pptx) à partir de contenu structuré en Markdown.
 
 ## 🚀 Fonctionnalités
 
-- **Génération de présentations** à partir de JSON/Markdown structuré
-- **Templates PowerPoint** personnalisables avec sélection intelligente de layouts
-- **Mapping automatique** du contenu aux layouts PowerPoint appropriés
-- **Gestion du dépassement** de texte et de contenu
-- **Interface en ligne de commande** simple et intuitive
-- **Support pour le contenu riche** (texte, listes à puces, tableaux, images, diagrammes Mermaid)
+* **Génération de présentations** à partir de fichiers Markdown structurés
+* **Templates PowerPoint** personnalisables avec sélection intelligente de layouts
+* **Mapping automatique** du contenu aux layouts PowerPoint appropriés
+* **Gestion du dépassement** de texte et de contenu
+* **Interface en ligne de commande** simple et intuitive
+* **Support pour le contenu riche** : texte, listes à puces, tableaux, images, diagrammes Mermaid
 
 ## 📋 Prérequis
 
-- Python 3.12+
-- [Conda](https://docs.conda.io/en/latest/) pour la gestion de l'environnement
+* Python 3.12+
+* [Conda](https://docs.conda.io/en/latest/) (optionnel, pour isoler l’environnement)
 
 ## ⚙️ Installation
 
-1. Clonez le dépôt :
+1. Clonez le dépôt.
+2. Créez et activez l’environnement Conda :
 
-```bash
-git clone https://github.com/username/doc2pptx.git
-cd doc2pptx
-```
+   ```bash
+   conda env create -f env.yml
+   conda activate doc2pptx
+   ```
+3. Installez le package en mode développement :
 
-2. Créez et activez l'environnement Conda :
-
-```bash
-conda env create -f env.yml
-conda activate doc2pptx
-```
-
-3. Installez le package en mode développement :
-
-```bash
-pip install -e .
-```
+   ```bash
+   pip install -e .
+   ```
 
 ## 🔧 Utilisation
 
-### Génération d'une présentation
+### 1. Préparez votre fichier Markdown
+
+Votre document doit débuter par un frontmatter YAML (optionnel) puis suivre une structure hiérarchique :
+
+```markdown
+---
+title: Stratégie Marketing Digital 2025
+author: Marie Dupont
+description: Présentation de la stratégie marketing digital pour l'année 2025
+---
+
+# Stratégie Marketing Digital 2025
+
+## Introduction
+
+Texte introductif...
+
+### Principaux objectifs
+
+* Objectif 1
+* Objectif 2
+
+## Analyse du marché actuel
+
+| Tendance                  | Impact           | Position actuelle     |
+|---------------------------|------------------|-----------------------|
+| Intelligence artificielle | Très élevé       | En développement      |
+| Marketing de contenu      | Élevé            | Bien établi           |
+...
+
+![Description de l'image](path/to/image.jpg)
+```
+
+### 2. Générez la présentation
 
 ```bash
-doc2pptx generate --input input.json --template template.pptx --output output.pptx
+doc2pptx generate \
+  --template data/templates/my_template.pptx \
+  --output   data/output/presentation.pptx \
+  --ai-optimize        # (facultatif) pour IA
+  --content-planning   # (facultatif) pour planification du contenu
+  data/input/example.md
 ```
 
-### Options de génération
+**Options CLI principales :**
 
-```
---input, -i          Fichier JSON d'entrée avec le contenu de la présentation
---template, -t       Fichier template PowerPoint (.pptx)
---output, -o         Chemin du fichier PowerPoint de sortie (.pptx)
---verbose, -v        Active les messages détaillés
+| Option               | Alias | Description                                     |
+| -------------------- | ----- | ----------------------------------------------- |
+| `--template`         | `-t`  | Chemin vers le template PPTX                    |
+| `--output`           | `-o`  | Chemin du fichier de sortie `.pptx`             |
+| `--ai-optimize`      |       | Active l’optimisation IA de la mise en page     |
+| `--content-planning` |       | Active la planification intelligente du contenu |
+| `--verbose`          | `-v`  | Affiche les logs détaillés                      |
+
+### 3. Exécution rapide via Python
+
+```python
+from doc2pptx.cli import main  # lève une exception si non configuré
+import sys
+sys.argv = [
+    'doc2pptx', 'generate',
+    '--template', 'data/templates/base_template.pptx',
+    'data/input/example.md'
+]
+main()
 ```
 
-### Format du fichier JSON d'entrée
+## 📑 Format Markdown pris en charge
 
-```json
-{
-  "id": "ma-presentation",
-  "title": "Titre de la présentation",
-  "author": "Nom de l'auteur",
-  "description": "Description de la présentation",
-  "metadata": {
-    "category": "Catégorie",
-    "keywords": "mot-clé1, mot-clé2"
-  },
-  "sections": [
-    {
-      "id": "section-1",
-      "title": "Titre de la section",
-      "type": "title",
-      "slides": [
-        {
-          "id": "slide-1",
-          "title": "Titre de la diapositive",
-          "layout_name": "Diapositive de titre",
-          "blocks": [
-            {
-              "id": "block-1",
-              "title": "Titre du bloc",
-              "content": {
-                "content_type": "text",
-                "text": "Contenu texte du bloc"
-              }
-            }
-          ],
-          "notes": "Notes pour cette diapositive"
-        }
-      ]
-    }
-  ]
-}
-```
+* **Frontmatter YAML** : `title`, `author`, `description`, `template_path`
+* **Titres** : `# H1` → slide titre, `## H2` → section, `### H3` → slide
+* **Texte** : paragraphes séparés par une ligne vide
+* **Listes** : `*` ou `-` pour puces, `1.` pour numérotées
+* **Tableaux** : syntaxe `| … | … | … |` (styles : `| … | style:accent1 |`)
+* **Images** : `![texte alternatif](chemin/vers/image.jpg)`
+* **Mermaid** : bloc ``mermaid` … ``
+* **Graphiques** : bloc ``chart` … ``
 
 ## 🧪 Tests
 
-Exécutez les tests unitaires et end-to-end avec pytest :
-
 ```bash
-pytest
-```
-
-Ou avec couverture de code :
-
-```bash
-pytest --cov=doc2pptx
+pytest  # unitaires et E2E
+pytest --cov=doc2pptx  # avec couverture
 ```
 
 ## 🛠️ Architecture du projet
 
 ```
 src/doc2pptx/
-├── core/              # Modèles Pydantic de base
-│   ├── models.py      # Section, SlideBlock, Presentation
-│   └── settings.py    # BaseSettings (clés API, chemins)
-├── ingest/            # Chargement des données
-│   ├── json_loader.py # load_sections()
-│   └── markdown_loader.py
-├── layout/            # Mapping section → layout
-│   ├── rules.yaml
-│   └── selector.py
-├── ppt/               # Génération PPTX
-│   ├── template_loader.py
-│   ├── builder.py     # PPTBuilder.build()
-│   ├── overflow.py    # OverflowHandler
-│   └── image.py       # Unsplash + mermaid
-├── editor/            # Édition post-génération
-│   ├── models.py      # MoveSlide, UpdateText…
-│   ├── apply.py       # apply_commands()
-│   └── utils.py
-├── llm/               # Fonction NL → commandes
-│   └── command_parser.py
-└── cli.py             # Typer CLI (generate, edit, prompt)
+├── core/              # Modèles Pydantic & réglages
+├── ingest/            # Chargeur Markdown (et JSON déprécié)
+├── layout/            # Règles de mapping vers layouts
+├── ppt/               # Génération PPTX (builder, templates)
+├── editor/            # Édition post-génération (JSON seed)
+├── llm/               # Optimisation IA & planification
+└── cli.py             # Interface Typer (generate / edit)
 ```
-
-## 📝 Exemple d'utilisation
-
-1. Préparez un fichier JSON avec votre contenu structuré :
-
-```bash
-cat > example.json << EOF
-{
-  "id": "exemple-presentation",
-  "title": "Présentation d'exemple",
-  "author": "John Doe",
-  "sections": [
-    {
-      "id": "intro",
-      "title": "Introduction",
-      "type": "title",
-      "slides": [
-        {
-          "id": "slide-1",
-          "title": "Titre de la présentation",
-          "layout_name": "Diapositive de titre",
-          "blocks": [
-            {
-              "id": "block-1",
-              "content": {
-                "content_type": "text",
-                "text": "Présentation générée avec doc2pptx"
-              }
-            }
-          ]
-        }
-      ]
-    }
-  ]
-}
-EOF
-```
-
-2. Générez la présentation :
-
-```bash
-doc2pptx generate --input example.json --template template.pptx --output presentation.pptx
-```
-
-3. Ouvrez le fichier PowerPoint généré :
-
-```bash
-# Sous Windows
-start presentation.pptx
-
-# Sous macOS
-open presentation.pptx
-
-# Sous Linux
-xdg-open presentation.pptx
-```
-
-## 📈 Roadmap
-
-- [x] Génération de base à partir de JSON
-- [x] Sélection intelligente de layouts
-- [x] Gestion du dépassement de texte
-- [ ] Support complet des images (Unsplash + locales)
-- [ ] Support des diagrammes Mermaid
-- [ ] Édition de présentations existantes
-- [ ] Commandes en langage naturel
-
-## 🤝 Contribution
-
-Les contributions sont les bienvenues ! N'hésitez pas à ouvrir une issue ou à soumettre une pull request.
 
 ## 📄 Licence
 
