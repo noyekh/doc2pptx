@@ -1,0 +1,33 @@
+# Fichiers d'environnement
+.env
+.env.*
+
+# Répertoires de données volumineuses ou sensibles
+/scripts/
+/tests/
+
+# Fichiers Python temporaires et caches
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.ipynb_checkpoints/
+
+# Environnements virtuels Python
+.env/
+.venv/
+env/
+venv/
+
+# Fichiers de build Python
+build/
+dist/
+*.egg-info/
+
+# Logs et fichiers temporaires
+*.log
+*.tmp
+
+# Système
+.DS_Store
+Thumbs.db
