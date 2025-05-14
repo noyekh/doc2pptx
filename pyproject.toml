@@ -1,0 +1,73 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "doc2pptx"
+version = "0.1.0"
+description = "Génération et édition de présentations PowerPoint à partir de données structurées"
+authors = [
+    {name = "Doc2PPTX Team"}
+]
+readme = "README.md"
+requires-python = ">=3.12"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "python-pptx>=0.6.22",
+    "pydantic>=2.6.1",
+    "pydantic-settings>=2.2.1",
+    "typer[all]>=0.9.0",
+    "openai>=1.12.0",
+    "instructor>=1.0.0",
+    "pyunsplash>=1.0.0rc2",
+    "python-dotenv>=1.0.0",
+    "pyyaml>=6.0.1",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.4.3",
+    "pytest-cov>=4.1.0",
+    "black>=23.11.0",
+    "ruff>=0.1.5",
+    "pre-commit>=3.5.0",
+]
+api = [
+    "fastapi>=0.104.1",
+    "uvicorn>=0.24.0",
+]
+
+[project.scripts]
+doc2pptx = "doc2pptx.cli:app"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.black]
+line-length = 88
+target-version = ["py312"]
+include = '\.pyi?$'
+
+[tool.ruff]
+target-version = "py312"
+line-length = 88
+select = [
+    "E",  # pycodestyle errors
+    "F",  # pyflakes
+    "I",  # isort
+    "C",  # flake8-comprehensions
+    "B",  # flake8-bugbear
+]
+ignore = []
+
+[tool.ruff.isort]
+known-first-party = ["doc2pptx"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = "test_*.py"
+addopts = "--cov=src/doc2pptx --cov-report=term-missing --cov-report=xml"

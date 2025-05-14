@@ -1,0 +1,579 @@
+{
+    "title": "Analyse Stratégique du Marché 2025",
+    "description": "Une analyse complète des tendances et opportunités du marché pour le Q2 2025",
+    "sections": [
+        {
+            "type": "title",
+            "title": "Analyse Stratégique du Marché",
+            "subtitle": "Perspectives et Opportunités Q2 2025",
+            "content": "Préparé par l'équipe Intelligence Business",
+            "slides": [
+                {
+                    "id": "slide-001",
+                    "title": "Analyse Stratégique du Marché",
+                    "layout_name": "Diapositive de titre",
+                    "blocks": [
+                        {
+                            "id": "block-001",
+                            "title": "Perspectives et Opportunités Q2 2025",
+                            "content": {
+                                "content_type": "text",
+                                "text": "Préparé par l'équipe Intelligence Business"
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "agenda",
+            "title": "Agenda",
+            "content": [
+                "Vue d'ensemble du marché",
+                "Tendances clés",
+                "Analyse des concurrents",
+                "Opportunités",
+                "Évaluation des risques",
+                "Recommandations"
+            ],
+            "slides": [
+                {
+                    "id": "slide-002",
+                    "title": "Agenda",
+                    "layout_name": "Titre et texte",
+                    "blocks": [
+                        {
+                            "id": "block-002",
+                            "content": {
+                                "content_type": "bullet_points",
+                                "bullet_points": [
+                                    "Vue d'ensemble du marché",
+                                    "Tendances clés",
+                                    "Analyse des concurrents",
+                                    "Opportunités",
+                                    "Évaluation des risques",
+                                    "Recommandations"
+                                ]
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "section_header",
+            "title": "Vue d'ensemble du marché",
+            "content": "État actuel du paysage du marché mondial",
+            "slides": [
+                {
+                    "id": "slide-003",
+                    "title": "Vue d'ensemble du marché",
+                    "layout_name": "Chapitre 1",
+                    "blocks": [
+                        {
+                            "id": "block-003",
+                            "content": {
+                                "content_type": "text",
+                                "text": "État actuel du paysage du marché mondial"
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "bullet_list",
+            "title": "Indicateurs clés du marché",
+            "content": [
+                "La taille du marché mondial a atteint 2,3T$ au T1 2025, une croissance annuelle de 3,7%",
+                "Performance régionale: APAC +5,2%, Amérique du Nord +2,8%, Europe +1,9%",
+                "Les coûts d'acquisition client ont augmenté de 12% dans l'industrie",
+                "L'adoption des canaux digitaux s'est accélérée à 78% des transactions totales"
+            ],
+            "slides": [
+                {
+                    "id": "slide-004",
+                    "title": "Indicateurs clés du marché",
+                    "layout_name": "Titre et texte",
+                    "blocks": [
+                        {
+                            "id": "block-004",
+                            "content": {
+                                "content_type": "bullet_points",
+                                "bullet_points": [
+                                    "La taille du marché mondial a atteint 2,3T$ au T1 2025, une croissance annuelle de 3,7%",
+                                    "Performance régionale: APAC +5,2%, Amérique du Nord +2,8%, Europe +1,9%",
+                                    "Les coûts d'acquisition client ont augmenté de 12% dans l'industrie",
+                                    "L'adoption des canaux digitaux s'est accélérée à 78% des transactions totales"
+                                ]
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "chart",
+            "title": "Croissance du marché par région",
+            "content": "```mermaid\npie title Part de marché par région\n    \"APAC\" : 42\n    \"Amérique du Nord\" : 31\n    \"Europe\" : 21\n    \"Reste du monde\" : 6\n```",
+            "slides": [
+                {
+                    "id": "slide-005",
+                    "title": "Croissance du marché par région",
+                    "layout_name": "Titre et texte 1 histogramme",
+                    "blocks": [
+                        {
+                            "id": "block-005",
+                            "content": {
+                                "content_type": "mermaid",
+                                "mermaid": {
+                                    "code": "pie title Part de marché par région\n    \"APAC\" : 42\n    \"Amérique du Nord\" : 31\n    \"Europe\" : 21\n    \"Reste du monde\" : 6",
+                                    "caption": "Croissance du marché par région"
+                                }
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "text_blocks",
+            "title": "Facteurs économiques",
+            "content": "L'économie mondiale continue de faire preuve de résilience malgré les pressions inflationnistes. Les banques centrales ont commencé à assouplir leur politique monétaire avec des baisses de taux attendues tout au long de 2025, ce qui pourrait stimuler la croissance sur nos marchés clés.\n\nLes perturbations de la chaîne d'approvisionnement de 2023-2024 sont largement résolues, mais les marchés du travail restent tendus dans les secteurs techniques liés à notre feuille de route de développement de produits.",
+            "slides": [
+                {
+                    "id": "slide-006",
+                    "title": "Facteurs économiques",
+                    "layout_name": "Titre et texte",
+                    "blocks": [
+                        {
+                            "id": "block-006",
+                            "content": {
+                                "content_type": "text",
+                                "text": "L'économie mondiale continue de faire preuve de résilience malgré les pressions inflationnistes. Les banques centrales ont commencé à assouplir leur politique monétaire avec des baisses de taux attendues tout au long de 2025, ce qui pourrait stimuler la croissance sur nos marchés clés.\n\nLes perturbations de la chaîne d'approvisionnement de 2023-2024 sont largement résolues, mais les marchés du travail restent tendus dans les secteurs techniques liés à notre feuille de route de développement de produits."
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "section_header",
+            "title": "Tendances clés",
+            "content": "Modèles émergents façonnant la dynamique du marché",
+            "slides": [
+                {
+                    "id": "slide-007",
+                    "title": "Tendances clés",
+                    "layout_name": "Chapitre 1",
+                    "blocks": [
+                        {
+                            "id": "block-007",
+                            "content": {
+                                "content_type": "text",
+                                "text": "Modèles émergents façonnant la dynamique du marché"
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "image_right",
+            "title": "Intégration de l'IA",
+            "content": "Les attentes des clients pour les fonctionnalités alimentées par l'IA ont augmenté de 215% depuis l'année dernière. Nos recherches indiquent que 73% des clients entreprises considèrent désormais les capacités d'IA comme un 'must-have' dans leurs décisions d'achat.\n\nLes concurrents ont répondu en déployant rapidement des solutions d'IA avec différents niveaux de sophistication, le leader du marché A établissant une avance significative dans la perception des capacités d'IA.",
+            "image": {
+                "source": "unsplash",
+                "query": "artificial intelligence technology",
+                "alt_text": "Visualisation de la technologie IA"
+            },
+            "slides": [
+                {
+                    "id": "slide-008",
+                    "title": "Intégration de l'IA",
+                    "layout_name": "Titre et texte 1 visuel gauche",
+                    "blocks": [
+                        {
+                            "id": "block-008",
+                            "content": {
+                                "content_type": "image",
+                                "text": "Les attentes des clients pour les fonctionnalités alimentées par l'IA ont augmenté de 215% depuis l'année dernière. Nos recherches indiquent que 73% des clients entreprises considèrent désormais les capacités d'IA comme un 'must-have' dans leurs décisions d'achat.\n\nLes concurrents ont répondu en déployant rapidement des solutions d'IA avec différents niveaux de sophistication, le leader du marché A établissant une avance significative dans la perception des capacités d'IA.",
+                                "image": {
+                                    "query": "artificial intelligence technology",
+                                    "alt_text": "Visualisation de la technologie IA"
+                                }
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "two_column",
+            "title": "Durabilité & Changements réglementaires",
+            "content": {
+                "left": "**Durabilité**\n- 67% des clients priorisent les solutions écologiques\n- Les rapports d'empreinte carbone sont désormais requis par 38% des RFP d'entreprise\n- La certification verte offre un avantage de conversion de 18%",
+                "right": "**Paysage réglementaire**\n- Réglementations de confidentialité renforcées dans 17 marchés clés\n- Cadres de gouvernance de l'IA introduits dans l'UE et en Asie\n- Coûts de conformité des données transfrontalières augmentés de 47%"
+            },
+            "slides": [
+                {
+                    "id": "slide-009",
+                    "title": "Durabilité & Changements réglementaires",
+                    "layout_name": "Titre et 3 colonnes",
+                    "blocks": [
+                        {
+                            "id": "block-009-left",
+                            "title": "Durabilité",
+                            "content": {
+                                "content_type": "bullet_points",
+                                "bullet_points": [
+                                    "67% des clients priorisent les solutions écologiques",
+                                    "Les rapports d'empreinte carbone sont désormais requis par 38% des RFP d'entreprise",
+                                    "La certification verte offre un avantage de conversion de 18%"
+                                ]
+                            }
+                        },
+                        {
+                            "id": "block-009-right",
+                            "title": "Paysage réglementaire",
+                            "content": {
+                                "content_type": "bullet_points",
+                                "bullet_points": [
+                                    "Réglementations de confidentialité renforcées dans 17 marchés clés",
+                                    "Cadres de gouvernance de l'IA introduits dans l'UE et en Asie",
+                                    "Coûts de conformité des données transfrontalières augmentés de 47%"
+                                ]
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "section_header",
+            "title": "Analyse des concurrents",
+            "content": "Évaluation des acteurs clés du marché",
+            "slides": [
+                {
+                    "id": "slide-010",
+                    "title": "Analyse des concurrents",
+                    "layout_name": "Chapitre 1",
+                    "blocks": [
+                        {
+                            "id": "block-010",
+                            "content": {
+                                "content_type": "text",
+                                "text": "Évaluation des acteurs clés du marché"
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "table",
+            "title": "Top 5 des concurrents",
+            "content": [
+                ["Entreprise", "Part de marché", "Croissance", "Force principale", "Faiblesse clé"],
+                ["Alpha Inc.", "23%", "+2,1%", "Innovation produit", "Support client"],
+                ["Beta Co.", "19%", "+4,3%", "Intégration entreprise", "Structure tarifaire"],
+                ["Gamma Systems", "17%", "-0,8%", "Fonctionnalités de sécurité", "Rapidité de mise sur le marché"],
+                ["Delta Tech", "12%", "+7,2%", "Expérience utilisateur", "Problèmes d'évolutivité"],
+                ["Epsilon AI", "8%", "+11,6%", "Capacités d'IA", "Ensemble de fonctionnalités limité"]
+            ],
+            "slides": [
+                {
+                    "id": "slide-011",
+                    "title": "Top 5 des concurrents",
+                    "layout_name": "Titre et tableau",
+                    "blocks": [
+                        {
+                            "id": "block-011",
+                            "content": {
+                                "content_type": "table",
+                                "table": {
+                                    "headers": ["Entreprise", "Part de marché", "Croissance", "Force principale", "Faiblesse clé"],
+                                    "rows": [
+                                        ["Alpha Inc.", "23%", "+2,1%", "Innovation produit", "Support client"],
+                                        ["Beta Co.", "19%", "+4,3%", "Intégration entreprise", "Structure tarifaire"],
+                                        ["Gamma Systems", "17%", "-0,8%", "Fonctionnalités de sécurité", "Rapidité de mise sur le marché"],
+                                        ["Delta Tech", "12%", "+7,2%", "Expérience utilisateur", "Problèmes d'évolutivité"],
+                                        ["Epsilon AI", "8%", "+11,6%", "Capacités d'IA", "Ensemble de fonctionnalités limité"]
+                                    ]
+                                }
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "chart",
+            "title": "Matrice de positionnement concurrentiel",
+            "content": "```mermaid\nquadrantChart\n    title Matrice de positionnement concurrentiel\n    x-axis Prix bas --> Prix élevé\n    y-axis Qualité basse --> Qualité élevée\n    quadrant-1 Segment Premium\n    quadrant-2 Leaders de valeur\n    quadrant-3 Options économiques\n    quadrant-4 Surévalués\n    \"Alpha Inc.\": [0.7, 0.8]\n    \"Beta Co.\": [0.8, 0.6]\n    \"Gamma Systems\": [0.6, 0.7]\n    \"Delta Tech\": [0.35, 0.35]\n    \"Epsilon AI\": [0.5, 0.8]\n    \"Notre entreprise\": [0.6, 0.9]\n```",
+            "slides": [
+                {
+                    "id": "slide-012",
+                    "title": "Matrice de positionnement concurrentiel",
+                    "layout_name": "Titre et texte 1 histogramme",
+                    "blocks": [
+                        {
+                            "id": "block-012",
+                            "content": {
+                                "content_type": "mermaid",
+                                "mermaid": {
+                                    "code": "quadrantChart\n    title Matrice de positionnement concurrentiel\n    x-axis Prix bas --> Prix élevé\n    y-axis Qualité basse --> Qualité élevée\n    quadrant-1 Segment Premium\n    quadrant-2 Leaders de valeur\n    quadrant-3 Options économiques\n    quadrant-4 Surévalués\n    \"Alpha Inc.\": [0.7, 0.8]\n    \"Beta Co.\": [0.8, 0.6]\n    \"Gamma Systems\": [0.6, 0.7]\n    \"Delta Tech\": [0.35, 0.35]\n    \"Epsilon AI\": [0.5, 0.8]\n    \"Notre entreprise\": [0.6, 0.9]",
+                                    "caption": "Matrice de positionnement concurrentiel"
+                                }
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "section_header",
+            "title": "Opportunités",
+            "content": "Domaines stratégiques pour la croissance et l'expansion",
+            "slides": [
+                {
+                    "id": "slide-013",
+                    "title": "Opportunités",
+                    "layout_name": "Chapitre 1",
+                    "blocks": [
+                        {
+                            "id": "block-013",
+                            "content": {
+                                "content_type": "text",
+                                "text": "Domaines stratégiques pour la croissance et l'expansion"
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "bullet_list",
+            "title": "Priorités de développement produit",
+            "content": [
+                "Assistant IA amélioré avec des capacités spécifiques à l'industrie et une conception axée sur la confidentialité",
+                "Tableau de bord de durabilité avec rapports de conformité réglementaire",
+                "Expansion de l'écosystème API ciblant des intégrations inexploitées avec des plateformes émergentes",
+                "Solution low-code pour le segment intermédiaire où les concurrents restent sous-développés"
+            ],
+            "slides": [
+                {
+                    "id": "slide-014",
+                    "title": "Priorités de développement produit",
+                    "layout_name": "Titre et texte",
+                    "blocks": [
+                        {
+                            "id": "block-014",
+                            "content": {
+                                "content_type": "bullet_points",
+                                "bullet_points": [
+                                    "Assistant IA amélioré avec des capacités spécifiques à l'industrie et une conception axée sur la confidentialité",
+                                    "Tableau de bord de durabilité avec rapports de conformité réglementaire",
+                                    "Expansion de l'écosystème API ciblant des intégrations inexploitées avec des plateformes émergentes",
+                                    "Solution low-code pour le segment intermédiaire où les concurrents restent sous-développés"
+                                ]
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "image_left",
+            "title": "Marchés émergents",
+            "content": "Les marchés d'Asie du Sud présentent le potentiel de croissance le plus élevé, avec un TCAC de 18,7% projeté jusqu'en 2027. Les nouveaux entrants établissant des partenariats stratégiques ont connu des taux de rétention 3 fois meilleurs que ceux entrant indépendamment.\n\nLes obstacles réglementaires nécessitent une navigation prudente, mais les récents changements de politique en Inde et en Indonésie ont créé des conditions plus favorables pour notre catégorie de produits.",
+            "image": {
+                "source": "unsplash",
+                "query": "global business south asia",
+                "alt_text": "Visualisation du marché d'Asie du Sud"
+            },
+            "slides": [
+                {
+                    "id": "slide-015",
+                    "title": "Marchés émergents",
+                    "layout_name": "Titre et texte 1 visuel gauche",
+                    "blocks": [
+                        {
+                            "id": "block-015",
+                            "content": {
+                                "content_type": "image",
+                                "text": "Les marchés d'Asie du Sud présentent le potentiel de croissance le plus élevé, avec un TCAC de 18,7% projeté jusqu'en 2027. Les nouveaux entrants établissant des partenariats stratégiques ont connu des taux de rétention 3 fois meilleurs que ceux entrant indépendamment.\n\nLes obstacles réglementaires nécessitent une navigation prudente, mais les récents changements de politique en Inde et en Indonésie ont créé des conditions plus favorables pour notre catégorie de produits.",
+                                "image": {
+                                    "query": "global business south asia",
+                                    "alt_text": "Visualisation du marché d'Asie du Sud"
+                                }
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "section_header",
+            "title": "Évaluation des risques",
+            "content": "Défis clés et stratégies d'atténuation",
+            "slides": [
+                {
+                    "id": "slide-016",
+                    "title": "Évaluation des risques",
+                    "layout_name": "Chapitre 1",
+                    "blocks": [
+                        {
+                            "id": "block-016",
+                            "content": {
+                                "content_type": "text",
+                                "text": "Défis clés et stratégies d'atténuation"
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "heat_map",
+            "title": "Cartographie des risques",
+            "content": "```mermaid\nheatMap\n    title Matrice d'évaluation des risques (Impact vs Probabilité)\n    x-axis Probabilité basse --> Probabilité élevée\n    y-axis Impact faible --> Impact élevé\n    (0, 0) : Faible\n    (3, 0) : Faible\n    (7, 0) : Moyen\n    (10, 0) : Moyen\n    (0, 10) : Moyen\n    (5, 5) : Élevé\n    (10, 10) : Critique\n    \"Entrée d'un nouveau concurrent\": (6, 4)\n    \"Pression sur les prix\": (8, 6)\n    \"Perturbation technologique\": (4, 9)\n    \"Changements réglementaires\": (7, 8)\n    \"Pénurie de talents\": (9, 5)\n```",
+            "slides": [
+                {
+                    "id": "slide-017",
+                    "title": "Cartographie des risques",
+                    "layout_name": "Titre et texte 1 histogramme",
+                    "blocks": [
+                        {
+                            "id": "block-017",
+                            "content": {
+                                "content_type": "mermaid",
+                                "mermaid": {
+                                    "code": "heatMap\n    title Matrice d'évaluation des risques (Impact vs Probabilité)\n    x-axis Probabilité basse --> Probabilité élevée\n    y-axis Impact faible --> Impact élevé\n    (0, 0) : Faible\n    (3, 0) : Faible\n    (7, 0) : Moyen\n    (10, 0) : Moyen\n    (0, 10) : Moyen\n    (5, 5) : Élevé\n    (10, 10) : Critique\n    \"Entrée d'un nouveau concurrent\": (6, 4)\n    \"Pression sur les prix\": (8, 6)\n    \"Perturbation technologique\": (4, 9)\n    \"Changements réglementaires\": (7, 8)\n    \"Pénurie de talents\": (9, 5)",
+                                    "caption": "Cartographie des risques"
+                                }
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "quote",
+            "title": "Perspective stratégique",
+            "content": "Le plus grand risque est de ne prendre aucun risque. Dans un monde qui change rapidement, la seule stratégie garantie d'échouer est de ne pas prendre de risques.",
+            "slides": [
+                {
+                    "id": "slide-018",
+                    "title": "Perspective stratégique",
+                    "layout_name": "Titre et texte",
+                    "blocks": [
+                        {
+                            "id": "block-018",
+                            "content": {
+                                "content_type": "text",
+                                "text": "Le plus grand risque est de ne prendre aucun risque. Dans un monde qui change rapidement, la seule stratégie garantie d'échouer est de ne pas prendre de risques."
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "section_header",
+            "title": "Recommandations",
+            "content": "Priorités stratégiques pour le trimestre à venir",
+            "slides": [
+                {
+                    "id": "slide-019",
+                    "title": "Recommandations",
+                    "layout_name": "Chapitre 1",
+                    "blocks": [
+                        {
+                            "id": "block-019",
+                            "content": {
+                                "content_type": "text",
+                                "text": "Priorités stratégiques pour le trimestre à venir"
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "numbered_list",
+            "title": "Plan d'action",
+            "content": [
+                "Lancement de la suite d'analyse alimentée par l'IA d'ici la fin du T2 2025",
+                "Établissement de partenariats stratégiques avec des acteurs clés de l'industrie dans les marchés d'Asie du Sud",
+                "Mise en œuvre d'une structure tarifaire échelonnée pour répondre à la pression concurrentielle dans le segment intermédiaire",
+                "Accélération du développement des fonctionnalités de durabilité pour répondre aux exigences réglementaires croissantes",
+                "Initiation d'un programme d'acquisition de talents axé sur l'expertise en IA et la connaissance régionale"
+            ],
+            "slides": [
+                {
+                    "id": "slide-020",
+                    "title": "Plan d'action",
+                    "layout_name": "Titre et texte",
+                    "blocks": [
+                        {
+                            "id": "block-020",
+                            "content": {
+                                "content_type": "bullet_points",
+                                "bullet_points": [
+                                    "1. Lancement de la suite d'analyse alimentée par l'IA d'ici la fin du T2 2025",
+                                    "2. Établissement de partenariats stratégiques avec des acteurs clés de l'industrie dans les marchés d'Asie du Sud",
+                                    "3. Mise en œuvre d'une structure tarifaire échelonnée pour répondre à la pression concurrentielle dans le segment intermédiaire",
+                                    "4. Accélération du développement des fonctionnalités de durabilité pour répondre aux exigences réglementaires croissantes",
+                                    "5. Initiation d'un programme d'acquisition de talents axé sur l'expertise en IA et la connaissance régionale"
+                                ]
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "conclusion",
+            "title": "Prochaines étapes",
+            "content": "Le comité exécutif devrait prioriser l'allocation des ressources à l'initiative d'IA tout en maintenant l'élan dans les marchés émergents. Le suivi hebdomadaire des progrès par rapport aux cinq recommandations clés assurera la responsabilité et une correction rapide de cap à mesure que les conditions du marché évoluent.",
+            "slides": [
+                {
+                    "id": "slide-021",
+                    "title": "Prochaines étapes",
+                    "layout_name": "Chapitre 1",
+                    "blocks": [
+                        {
+                            "id": "block-021",
+                            "content": {
+                                "content_type": "text",
+                                "text": "Le comité exécutif devrait prioriser l'allocation des ressources à l'initiative d'IA tout en maintenant l'élan dans les marchés émergents. Le suivi hebdomadaire des progrès par rapport aux cinq recommandations clés assurera la responsabilité et une correction rapide de cap à mesure que les conditions du marché évoluent."
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "thank_you",
+            "title": "Merci",
+            "content": "Questions & Discussion",
+            "slides": [
+                {
+                    "id": "slide-022",
+                    "title": "Merci",
+                    "layout_name": "Chapitre 1",
+                    "blocks": [
+                        {
+                            "id": "block-022",
+                            "content": {
+                                "content_type": "text",
+                                "text": "Questions & Discussion"
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

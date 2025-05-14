@@ -1,0 +1,424 @@
+{
+  "title": "Testing Doc2PPTX Capabilities",
+  "description": "A test presentation showcasing various slide types and layouts",
+  "author": "QA Team",
+  "template_path": "tests/fixtures/base_template.pptx",
+  "sections": [
+    {
+      "id": "sec-001",
+      "type": "title",
+      "title": "Testing Doc2PPTX Capabilities",
+      "description": "Comprehensive Template and Layout Testing",
+      "slides": [
+        {
+          "id": "slide-001",
+          "title": "Testing Doc2PPTX Capabilities",
+          "layout_name": "Diapositive de titre",
+          "blocks": [
+            {
+              "id": "block-001",
+              "content": {
+                "content_type": "text",
+                "text": "Comprehensive Template and Layout Testing"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sec-002",
+      "type": "agenda",
+      "title": "Test Cases",
+      "slides": [
+        {
+          "id": "slide-002",
+          "title": "Test Cases",
+          "layout_name": "Titre et texte",
+          "blocks": [
+            {
+              "id": "block-002",
+              "content": {
+                "content_type": "bullet_points",
+                "bullet_points": [
+                  "Table Layouts and Styles",
+                  "Multi-Column Content",
+                  "Text and Image Combinations",
+                  "Chart Placeholders",
+                  "Specialized Layouts"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sec-003",
+      "type": "section_header",
+      "title": "Table Layouts and Styles",
+      "slides": [
+        {
+          "id": "slide-003",
+          "title": "Table Layouts and Styles",
+          "layout_name": "Chapitre 1",
+          "blocks": [
+            {
+              "id": "block-003",
+              "content": {
+                "content_type": "text",
+                "text": "Testing various table layouts and style options"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sec-004",
+      "type": "table",
+      "title": "Basic Table",
+      "slides": [
+        {
+          "id": "slide-004",
+          "title": "Basic Table",
+          "layout_name": "Titre et tableau",
+          "blocks": [
+            {
+              "id": "block-004",
+              "content": {
+                "content_type": "table",
+                "table": {
+                  "headers": ["Product", "Price", "Quantity", "Total"],
+                  "rows": [
+                    ["Laptop", "1200€", "2", "2400€"],
+                    ["Monitor", "350€", "3", "1050€"],
+                    ["Keyboard", "80€", "5", "400€"],
+                    ["Mouse", "40€", "5", "200€"]
+                  ]
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sec-005",
+      "type": "table",
+      "title": "Styled Table",
+      "slides": [
+        {
+          "id": "slide-005",
+          "title": "Styled Table",
+          "layout_name": "Titre et tableau",
+          "blocks": [
+            {
+              "id": "block-005",
+              "content": {
+                "content_type": "table",
+                "table": {
+                  "headers": ["Quarter", "Revenue", "Expenses", "Profit", "style:accent1"],
+                  "rows": [
+                    ["Q1 2025", "1,245,000€", "980,000€", "265,000€"],
+                    ["Q2 2025", "1,450,000€", "1,050,000€", "400,000€"],
+                    ["Q3 2025", "1,320,000€", "995,000€", "325,000€"],
+                    ["Q4 2025", "1,680,000€", "1,180,000€", "500,000€"]
+                  ]
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sec-006",
+      "type": "section_header",
+      "title": "Multi-Column Content",
+      "slides": [
+        {
+          "id": "slide-006",
+          "title": "Multi-Column Content",
+          "layout_name": "Chapitre 1",
+          "blocks": [
+            {
+              "id": "block-006",
+              "content": {
+                "content_type": "text",
+                "text": "Testing slides with multiple content columns"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sec-007",
+      "type": "two_column",
+      "title": "Two-Column Content",
+      "slides": [
+        {
+          "id": "slide-007",
+          "title": "Two-Column Content",
+          "layout_name": "Titre et 3 colonnes",
+          "blocks": [
+            {
+              "id": "block-007-left",
+              "title": "Advantages",
+              "content": {
+                "content_type": "bullet_points",
+                "bullet_points": [
+                  "Improved information organization",
+                  "Better use of slide space",
+                  "Enhanced visual hierarchy"
+                ]
+              }
+            },
+            {
+              "id": "block-007-right",
+              "title": "Use Cases",
+              "content": {
+                "content_type": "bullet_points",
+                "bullet_points": [
+                  "Feature comparisons",
+                  "Pros and cons analysis",
+                  "Multiple category presentation"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sec-008",
+      "type": "three_column",
+      "title": "Three-Column Content",
+      "slides": [
+        {
+          "id": "slide-008",
+          "title": "Three-Column Content",
+          "layout_name": "Titre et 3 colonnes",
+          "blocks": [
+            {
+              "id": "block-008-1",
+              "title": "Past",
+              "content": {
+                "content_type": "bullet_points",
+                "bullet_points": [
+                  "Initial market research",
+                  "Product prototype",
+                  "Alpha testing"
+                ]
+              }
+            },
+            {
+              "id": "block-008-2",
+              "title": "Present",
+              "content": {
+                "content_type": "bullet_points",
+                "bullet_points": [
+                  "Beta launch",
+                  "Customer feedback",
+                  "Iterative improvements"
+                ]
+              }
+            },
+            {
+              "id": "block-008-3",
+              "title": "Future",
+              "content": {
+                "content_type": "bullet_points",
+                "bullet_points": [
+                  "Full market release",
+                  "Feature expansion",
+                  "Global scaling"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sec-009",
+      "type": "section_header",
+      "title": "Text and Image Combinations",
+      "slides": [
+        {
+          "id": "slide-009",
+          "title": "Text and Image Combinations",
+          "layout_name": "Chapitre 1",
+          "blocks": [
+            {
+              "id": "block-009",
+              "content": {
+                "content_type": "text",
+                "text": "Testing layouts with text and image combinations"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sec-010",
+      "type": "image_left",
+      "title": "Image on Left",
+      "slides": [
+        {
+          "id": "slide-010",
+          "title": "Image on Left",
+          "layout_name": "Titre et texte 1 visuel gauche",
+          "blocks": [
+            {
+              "id": "block-010",
+              "content": {
+                "content_type": "image",
+                "text": "When placing an image on the left, the text should appear on the right side of the slide. This layout is useful for explaining visual concepts with supporting text.",
+                "image": {
+                  "query": "business presentation graphic",
+                  "alt_text": "Business presentation illustration"
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sec-011",
+      "type": "chart",
+      "title": "Chart Placeholder",
+      "slides": [
+        {
+          "id": "slide-011",
+          "title": "Chart Placeholder",
+          "layout_name": "Titre et texte 1 histogramme",
+          "blocks": [
+            {
+              "id": "block-011-text",
+              "content": {
+                "content_type": "text",
+                "text": "This layout includes a placeholder for a chart on the right side. The chart should render properly with the provided data."
+              }
+            },
+            {
+              "id": "block-011-chart",
+              "content": {
+                "content_type": "chart",
+                "chart": {
+                  "chart_type": "bar",
+                  "title": "Quarterly Sales",
+                  "categories": ["Q1", "Q2", "Q3", "Q4"],
+                  "series": [
+                    {
+                      "name": "2024",
+                      "data": [12, 19, 15, 22]
+                    },
+                    {
+                      "name": "2025",
+                      "data": [15, 21, 18, 25]
+                    }
+                  ]
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sec-012",
+      "type": "section_header",
+      "title": "Specialized Content",
+      "slides": [
+        {
+          "id": "slide-012",
+          "title": "Specialized Content",
+          "layout_name": "Chapitre 1",
+          "blocks": [
+            {
+              "id": "block-012",
+              "content": {
+                "content_type": "text",
+                "text": "Testing special content types and formatting"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sec-013",
+      "type": "code",
+      "title": "Code Block",
+      "slides": [
+        {
+          "id": "slide-013",
+          "title": "Code Block",
+          "layout_name": "Titre et texte",
+          "blocks": [
+            {
+              "id": "block-013",
+              "content": {
+                "content_type": "code",
+                "code": {
+                  "code": "def process_presentation(json_data):\n    \"\"\"Process presentation data from JSON\"\"\"\n    presentation = Presentation(**json_data)\n    builder = PPTBuilder(template_path=presentation.template_path)\n    output_path = builder.build(presentation, 'output.pptx')\n    return output_path",
+                  "language": "python",
+                  "line_numbers": true
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sec-014",
+      "type": "mermaid",
+      "title": "Mermaid Diagram",
+      "slides": [
+        {
+          "id": "slide-014",
+          "title": "Mermaid Diagram",
+          "layout_name": "Titre et texte 1 histogramme",
+          "blocks": [
+            {
+              "id": "block-014",
+              "content": {
+                "content_type": "mermaid",
+                "mermaid": {
+                  "code": "flowchart TD\n    A[Start] --> B{JSON Valid?}\n    B -->|Yes| C[Parse JSON]\n    B -->|No| D[Error]\n    C --> E[Select Layouts]\n    E --> F[Build Slides]\n    F --> G[Save PPTX]\n    G --> H[End]",
+                  "caption": "doc2pptx Process Flow"
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sec-015",
+      "type": "thank_you",
+      "title": "Thank You",
+      "slides": [
+        {
+          "id": "slide-015",
+          "title": "Thank You",
+          "layout_name": "Chapitre 1",
+          "blocks": [
+            {
+              "id": "block-015",
+              "content": {
+                "content_type": "text",
+                "text": "Q&A Session"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

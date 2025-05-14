@@ -1,0 +1,5 @@
+cache
+doc2pptx
+layout
+output
+templates

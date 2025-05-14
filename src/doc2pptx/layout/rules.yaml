@@ -1,0 +1,193 @@
+---
+# Layout selection rules for doc2pptx
+# 
+# This file defines rules for selecting appropriate PowerPoint layouts
+# based on section types, content types, and content patterns.
+
+# Default layout to use when no other rules match
+default_layout: "Titre et texte"
+
+# Maps section types to layout names
+section_types:
+  title: "Diapositive de titre"
+  introduction: "Introduction"
+  content: "Titre et texte"
+  conclusion: "Chapitre 1"
+  appendix: "Titre et texte"
+  custom: "Titre et texte"
+  agenda: "Titre et texte"
+  default: "Titre et texte"
+
+# Maps content types to layout names
+content_types:
+  text: "Titre et texte"
+  bullet_points: "Titre et texte"
+  table: "Titre et tableau"
+  image: "Titre et texte 1 visuel gauche"
+  chart: "Titre et texte 1 histogramme"
+  mermaid: "Titre et texte 1 histogramme"
+  code: "Titre et texte"
+  default: "Titre et texte"
+
+# Maps specific content patterns to layout names
+# These are regex patterns that are matched against text content
+content_patterns:
+  "^thank you": "Chapitre 1"
+  "agenda": "Titre et texte"
+  "columns?": "Titre et 3 colonnes"
+  "comparison": "Titre et 3 colonnes"
+  "^key (points|takeaways)": "Titre et texte"
+  "market (share|analysis)": "Titre et texte 1 histogramme"
+  "graph": "Titre et texte 1 histogramme"
+  "chart": "Titre et texte 1 histogramme"
+  "image": "Titre et texte 1 visuel gauche"
+  "picture": "Titre et texte 1 visuel gauche"
+  "table": "Titre et tableau"
+  "questions": "Chapitre 1"
+  "recap": "Titre et texte"
+  "step(s)?": "Titre et texte"
+
+# Rules for combinations of content types
+content_combinations:
+  - requires:
+      content_types: ["image", "text"]
+      block_count: 2
+    layout: "Titre et texte 1 visuel gauche"
+  
+  - requires:
+      content_types: ["text", "text"]
+      block_count: 2
+    layout: "Titre et 3 colonnes"
+  
+  - requires:
+      content_types: ["chart", "text"]
+      block_count: 2
+    layout: "Titre et texte 1 histogramme"
+  
+  - requires:
+      content_types: ["bullet_points"]
+      title_pattern: "^key (points|takeaways)"
+    layout: "Titre et texte"
+  
+  - requires:
+      content_types: ["bullet_points", "bullet_points", "bullet_points"]
+      block_count: 3
+    layout: "Titre et 3 colonnes"
+  
+  - requires:
+      content_types: ["table"]
+      title_pattern: "comparison|matrix"
+    layout: "Titre et tableau"
+  
+  - requires:
+      content_types: ["bullet_points"]
+      title_pattern: "agenda|outline|summary"
+    layout: "Titre et texte"
+
+# Layout for slides with more than 3 content blocks
+multi_block_layout: "Titre et texte"
+
+# Layout for slides with exactly 2 content blocks
+two_block_layout: "Titre et 3 colonnes"
+
+# Special mapping for the first slide of each section
+section_start_layout: "Chapitre 1"
+
+# Special mapping for certain slide positions
+position_layouts:
+  first: "Diapositive de titre"
+  last: "Chapitre 1"
+
+# Specific content category mappings
+content_categories:
+  title_slide:
+    patterns: ["^welcome", "^introduction", "^about", "^presentation", "^overview"]
+    layout: "Diapositive de titre"
+  
+  agenda_slide:
+    patterns: ["^agenda", "^outline", "^contents", "^topics"]
+    layout: "Titre et texte"
+  
+  thank_you_slide:
+    patterns: ["^thank", "^questions", "^contact", "^the end"]
+    layout: "Chapitre 1"
+  
+  data_slide:
+    patterns: ["^data", "^statistics", "^numbers", "^metrics", "^analytics"]
+    layout: "Titre et texte 1 histogramme"
+
+# Content styling hints based on layout
+style_hints:
+  "Diapositive de titre":
+    font_size_title: "large"
+    font_size_content: "medium"
+    alignment: "center"
+  
+  "Titre et texte":
+    font_size_title: "medium"
+    font_size_content: "small"
+    alignment: "left"
+  
+  "Titre et tableau":
+    font_size_title: "medium"
+    font_size_content: "small"
+    alignment: "center"
+  
+  "Titre et texte 1 visuel gauche":
+    font_size_title: "medium"
+    font_size_content: "small"
+    alignment: "right"
+  
+  "Titre et texte 1 histogramme":
+    font_size_title: "medium"
+    font_size_content: "small"
+    alignment: "left"
+    
+  "Titre et 3 colonnes":
+    font_size_title: "medium"
+    font_size_content: "small"
+    alignment: "left"
+  
+  "Chapitre 1":
+    font_size_title: "large"
+    font_size_content: "none"
+    alignment: "left"
+  
+  "Introduction":
+    font_size_title: "large"
+    font_size_content: "medium"
+    alignment: "left"
+
+# Mapping between section names and preferred layouts
+# This is used when the section name matches these patterns
+section_name_mappings:
+  "introduction|overview|about": "Introduction"
+  "agenda|outline|contents": "Titre et texte"
+  "data|statistics|metrics|numbers": "Titre et texte 1 histogramme"
+  "comparison|versus|vs\\.": "Titre et 3 colonnes"
+  "conclusion|summary|recap": "Chapitre 1"
+  "appendix|references|sources": "Titre et texte"
+  "contact|questions": "Chapitre 1"
+
+# Additional weights for layout scoring
+# Higher weight means the layout is more likely to be selected when multiple layouts match
+layout_weights:
+  "Diapositive de titre": 10
+  "Titre et texte": 5
+  "Chapitre 1": 8
+  "Introduction": 7
+  "Titre et texte 1 visuel gauche": 6
+  "Titre et texte 1 histogramme": 6
+  "Titre et tableau": 6
+  "Titre et 3 colonnes": 5
+
+# Mapping between specific keywords in slide content and appropriate layouts
+keyword_mappings:
+  "graph|chart|visualization|trend|growth": "Titre et texte 1 histogramme"
+  "image|photo|picture|diagram": "Titre et texte 1 visuel gauche"
+  "table|matrix|grid": "Titre et tableau"
+  "comparison|versus|vs\\.": "Titre et 3 colonnes"
+  "list|steps|factors|points": "Titre et texte"
+  "title|main|heading": "Diapositive de titre"
+  "section|chapter|part": "Chapitre 1"
+  "introduction|overview": "Introduction"
