@@ -130,7 +130,3 @@ src/doc2pptx/
 ├── llm/               # Optimisation IA & planification
 └── cli.py             # Interface Typer (generate / edit)
 ```
-
-## 📄 Licence
-
-Ce projet est sous licence [MIT](LICENSE).
