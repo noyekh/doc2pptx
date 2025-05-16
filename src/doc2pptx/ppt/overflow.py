@@ -57,70 +57,70 @@ class OverflowHandler:
             except Exception as e:
                 logger.warning(f"Could not initialize AI optimizer: {e}. Falling back to rule-based overflow handling.")
                 self.use_ai = False
- 
-def handle_slide_overflow(self, section: Section, slide: Slide, shape_width: int, shape_height: int) -> List[Slide]:
-    """
-    Handle content overflow by creating additional slides if necessary.
-    """
-    if not self.use_ai:
-        # If AI is not enabled, just return the original slide
-        return [slide]
     
-    try:
-        # Use AI to analyze overflow
-        analysis = self.optimizer.analyze_content_overflow(slide, shape_width, shape_height)
-        
-        if not analysis["may_overflow"]:
-            # No overflow or not enough to warrant a new slide
+    def handle_slide_overflow(self, section: Section, slide: Slide, shape_width: int, shape_height: int) -> List[Slide]:
+        """
+        Handle content overflow by creating additional slides if necessary.
+        """
+        if not self.use_ai:
+            # If AI is not enabled, just return the original slide
             return [slide]
         
-        # Create additional slides
-        result_slides = []
-        
-        # Modify the original slide with the first part of the content
-        original_slide = slide
-        original_blocks = slide.blocks
-        
-        # Process each part of the content from split_recommendation instead of content_division
-        split_recommendation = analysis.get("split_recommendation", [])
-        
-        if not split_recommendation or len(split_recommendation) <= 1:
-            # No valid split recommendation
-            return [slide]
+        try:
+            # Use AI to analyze overflow
+            analysis = self.optimizer.analyze_content_overflow(slide, shape_width, shape_height)
             
-        # Process each division suggested by AI
-        for i, content_part in enumerate(split_recommendation):
-            if i == 0:
-                # First part goes in the original slide
-                new_blocks = self._create_blocks_from_content(content_part, original_blocks)
-                original_slide.blocks = new_blocks
-                result_slides.append(original_slide)
-            else:
-                # Create a new slide for each additional part
-                new_slide_id = f"{slide.id}-part-{i+1}"
-                new_slide_title = f"{slide.title} (continued)"
+            if not analysis["may_overflow"]:
+                # No overflow or not enough to warrant a new slide
+                return [slide]
+            
+            # Create additional slides
+            result_slides = []
+            
+            # Modify the original slide with the first part of the content
+            original_slide = slide
+            original_blocks = slide.blocks
+            
+            # Process each part of the content from split_recommendation instead of content_division
+            split_recommendation = analysis.get("split_recommendation", [])
+            
+            if not split_recommendation or len(split_recommendation) <= 1:
+                # No valid split recommendation
+                return [slide]
                 
-                # Create blocks for the new slide
-                new_blocks = self._create_blocks_from_content(content_part, original_blocks)
-                
-                # Create the new slide with the same layout as the original
-                new_slide = Slide(
-                    id=new_slide_id,
-                    title=new_slide_title,
-                    layout_name=slide.layout_name,
-                    blocks=new_blocks,
-                    notes=f"Continuation of slide {slide.title}"
-                )
-                
-                result_slides.append(new_slide)
-        
-        return result_slides
-                
-    except Exception as e:
-        logger.error(f"Error handling slide overflow: {e}")
-        # Return the original slide on error
-        return [slide]
-        
+            # Process each division suggested by AI
+            for i, content_part in enumerate(split_recommendation):
+                if i == 0:
+                    # First part goes in the original slide
+                    new_blocks = self._create_blocks_from_content(content_part, original_blocks)
+                    original_slide.blocks = new_blocks
+                    result_slides.append(original_slide)
+                else:
+                    # Create a new slide for each additional part
+                    new_slide_id = f"{slide.id}-part-{i+1}"
+                    new_slide_title = f"{slide.title} (continued)"
+                    
+                    # Create blocks for the new slide
+                    new_blocks = self._create_blocks_from_content(content_part, original_blocks)
+                    
+                    # Create the new slide with the same layout as the original
+                    new_slide = Slide(
+                        id=new_slide_id,
+                        title=new_slide_title,
+                        layout_name=slide.layout_name,
+                        blocks=new_blocks,
+                        notes=f"Continuation of slide {slide.title}"
+                    )
+                    
+                    result_slides.append(new_slide)
+            
+            return result_slides
+                    
+        except Exception as e:
+            logger.error(f"Error handling slide overflow: {e}")
+            # Return the original slide on error
+            return [slide]
+       
     def _create_blocks_from_content(self, content: str, original_blocks: List[SlideBlock]) -> List[SlideBlock]:
         """
         Create slide blocks from the given content, preserving the structure of the original blocks.
